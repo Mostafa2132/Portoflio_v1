@@ -148,3 +148,36 @@ transition: transform 0.2s ease-in-out;
   white-space: nowrap;
   overflow: hidden;
 }
+
+/* Custom scrollbar styles - Enhanced */
+::-webkit-scrollbar {
+  width: 12px;
+  background: hsl(var(--background));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--primary-foreground)), hsl(var(--card)));
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25), 0 0 0 2px hsl(var(--background)) inset;
+  border: 2px solid hsl(var(--background));
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--primary)), hsl(var(--primary-foreground)));
+  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.35), 0 0 0 2px hsl(var(--primary)) inset;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, hsl(var(--card)), hsl(var(--background)));
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(124, 58, 237, 0.08) inset;
+}
+
+/* Firefox scrollbar - Enhanced */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary)) hsl(var(--card));
+  scroll-behavior: smooth;
+}

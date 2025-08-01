@@ -6,6 +6,7 @@ import AllProjects from "./Pages/AllProjects/AllProjects";
 import { Bounce, ToastContainer } from "react-toastify";
 import NotFound from "./Pages/NotFound/NotFound";
 import Loading from "./Components/Loading/Loading";
+import CanvasCursor from "./Components/CanvasCursor/CanvasCursor";
 
 // App Routing
 const router = createBrowserRouter([
@@ -41,6 +42,7 @@ function App() {
 
   return (
     <>
+      <CanvasCursor />
       {loading ? <Loading /> : <RouterProvider router={router} />}
       {/* Toaster */}
       <ToastContainer
