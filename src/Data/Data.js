@@ -3,7 +3,7 @@
 export const navLinks = [
   {
     title: "Home",
-    path: "/",
+    path: "#",
   },
   {
     title: "About",

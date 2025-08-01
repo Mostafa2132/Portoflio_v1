@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -125,7 +124,7 @@
     color: white;
     box-shadow: 0 6px 18px rgba(124, 58, 237, 0.35);
     transform: scale(1.1);
-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     border-color: theme("colors.violet.600");
   }
 
@@ -157,16 +156,28 @@ transition: transform 0.2s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--primary-foreground)), hsl(var(--card)));
+  background: linear-gradient(
+    120deg,
+    hsl(var(--primary)),
+    hsl(var(--primary-foreground)),
+    hsl(var(--card))
+  );
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25), 0 0 0 2px hsl(var(--background)) inset;
+  box-shadow: 0 4px 16px rgba(124, 58, 237, 0.25),
+    0 0 0 2px hsl(var(--background)) inset;
   border: 2px solid hsl(var(--background));
   transition: background 0.3s, box-shadow 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(120deg, hsl(var(--primary)), hsl(var(--primary)), hsl(var(--primary-foreground)));
-  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.35), 0 0 0 2px hsl(var(--primary)) inset;
+  background: linear-gradient(
+    120deg,
+    hsl(var(--primary)),
+    hsl(var(--primary)),
+    hsl(var(--primary-foreground))
+  );
+  box-shadow: 0 6px 24px rgba(124, 58, 237, 0.35),
+    0 0 0 2px hsl(var(--primary)) inset;
 }
 
 ::-webkit-scrollbar-track {
@@ -180,4 +191,10 @@ transition: transform 0.2s ease-in-out;
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--primary)) hsl(var(--card));
   scroll-behavior: smooth;
+}
+button {
+  cursor: pointer;
+}
+html {
+  scroll-padding-top: 60px;
 }
